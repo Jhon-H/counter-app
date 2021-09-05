@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 
@@ -29,9 +28,10 @@ class App extends React.Component {
   changeItems (items) {
     this.setState({"items": items });
     const newCant = Object.keys(items)
-                    .filter( key => items[key] > 0).length;
+                    .filter( key => items[key] > 0)
+                    .length;
 
-    if(newCant != this.state.cant)
+    if(newCant !== this.state.cant)
       this.changeCant(newCant);
   }
 

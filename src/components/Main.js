@@ -74,12 +74,12 @@ class Main extends React.Component {
 
   shouldBeDisabled (name) {
     const items = this.props.value;
-    return (items[name] == 0);
+    return (items[name] === 0);
   }
 
   reset () {
     const cant = this.props.totalOriginal;
-    const itemsReseted = new Object();
+    const itemsReseted = {};
 
     for(let i=1; i<=cant; ++i){
       itemsReseted["item" + i] = 0;
